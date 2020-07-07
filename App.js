@@ -4,11 +4,11 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import { Text } from 'react-native';
+import { SafeAreaView, StatusBar, StyleSheet, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 
 /**
- * Root Imports
+ * Local Imports
 */
 
 import { AuthGuard } from '~/components';
@@ -24,7 +24,23 @@ import { GuestRouter, VerifiedRouter } from '~/routers';
  */
 export default function App() {
   return (
-    <Text>Test</Text>
+    <NavigationContainer>
+      <TmpProvider>
+        <AuthProvider>
+          <ApiProvider>
+            <ServiceProvider>
+              <StatusBar backgroundColor='rgba(0, 0, 0, 0.885)' barStyle='light-content' />
+              <SafeAreaView style={ styles.container }>
+                <AuthGuard
+                  guest={ GuestRouter }
+                  verified={ VerifiedRouter }
+                />
+              </SafeAreaView>
+            </ServiceProvider>
+          </ApiProvider>
+        </AuthProvider>
+      </TmpProvider>
+    </NavigationContainer>
   );
 }
 

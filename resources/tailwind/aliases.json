@@ -1,0 +1,9 @@
+{
+  "input": {
+    "base": "text-white border-b border-gray-400",
+    "white-rounded": "px-4 py-2 text-black rounded-lg bg-white"
+  },
+
+  "msg": "relative p-4 pr-12 border-l-4",
+  "msg-error": "text-red-700 border-red-500 bg-red-100"
+}

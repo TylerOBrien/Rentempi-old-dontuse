@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'Rentempi' do
-  # Pods for Rentempi
+target 'Rentempinew' do
+  # Pods for Rentempinew
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'Rentempi' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'RentempiTests' do
+  target 'RentempinewTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +94,10 @@ target 'Rentempi' do
   end
 end
 
-target 'Rentempi-tvOS' do
-  # Pods for Rentempi-tvOS
+target 'Rentempinew-tvOS' do
+  # Pods for Rentempinew-tvOS
 
-  target 'Rentempi-tvOSTests' do
+  target 'Rentempinew-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

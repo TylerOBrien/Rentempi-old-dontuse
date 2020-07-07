@@ -4,6 +4,10 @@
 
 import { Button } from './Button';
 import { Form } from './Form';
+import { Input } from './Input';
+import { Password } from './Password';
+import { Submit } from './Submit';
+import { UnderlinedInput } from './UnderlinedInput';
 
  /**
  * Exports
@@ -11,5 +15,9 @@ import { Form } from './Form';
 
 export {
   Button,
-  Form
+  Form,
+  Input,
+  Password,
+  Submit,
+  UnderlinedInput
 }

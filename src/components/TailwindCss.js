@@ -22,7 +22,7 @@ import BaseDash from 'react-native-dash';
  * Local Imports
 */
 
-import aliases from '@resources/tailwind/aliases.json';
+import { getPropsWithTailwind } from '~/util/TailwindCss';
 import styles from '@resources/tailwind/styles.json';
 
 /**
@@ -32,98 +32,10 @@ import styles from '@resources/tailwind/styles.json';
 const { tailwind, getColor } = create(styles);
 
 /**
- * 
- */
-function applyAlias(name) {
-  if (!name) {
-    return undefined;
-  }
-
-  const names = name.split('.');
-  let alias = aliases;
-
-  for (let i = 0; i < names.length; i++) {
-    if ( !(alias = alias[names[i]]) ) {
-      return name;
-    }
-  }
-  
-  return typeof alias === 'string'
-    ? styles[names[0]]
-      ? `${ names[0] } ${ alias }`
-      : alias
-    : name
-  ;
-}
-
-/**
- * 
- */
-function getWithAliases(names) {
-  names = getTruthyNames(names);
-  
-  return names && names.split(' ').map(applyAlias).join(' ');
-}
-
-/**
- * 
- */
-function getTruthyNames(names) {
-  return !Array.isArray(names) ? names
-    : names.filter(
-        name => Array.isArray(name)
-          ? getTruthyNames(name)
-          : name && `${ name }`.trim().length
-        )
-        .join(' ');
-}
-
-/**
- * 
- */
-function getPropsWithTailwind({ style={}, ...props }) {
-  return {
-    ...props,
-    style: {
-      ...style,
-      ...tailwind( getWithAliases(props.tailwind) )
-    }
-  };
-}
-
-/**
  * Exports
 */
 
 export { getColor }
-
-/**
- * 
- */
-export function extendTailwind(prop, extension, fallback='container') {
-  if (typeof prop === 'string') {
-    return extendTailwind({ [fallback]: prop }, extension);
-  }
-
-  const result = { ...prop };
-
-  Object.entries(extension).forEach(([ name, tailw ]) => {
-    result[name] = getTruthyNames([ result[name], tailw ]);
-  });
-
-  return result;
-}
-
-/**
- * 
- */
-export function getTailwind(prop, key, useFallback=true) {
-  if (typeof prop === 'string' || Array.isArray(prop)) {
-    return useFallback && prop;
-  } else {
-    return prop && prop[key];
-  }
-}
 
 /**
  * 

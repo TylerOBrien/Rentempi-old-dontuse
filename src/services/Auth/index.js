@@ -11,7 +11,7 @@ import { ApiRequest } from '~/util/Api';
 /**
  * 
  */
-export function LoginService(data) {
+export function LoginAuthService(data) {
   const config = {
     method: 'POST',
     uri: '/v1/login',
@@ -24,7 +24,7 @@ export function LoginService(data) {
 /**
  * 
  */
-export function RegisterService(data) {
+export function RegisterAuthService(data) {
   const config = {
     method: 'POST',
     uri: '/v1/register',
@@ -37,7 +37,7 @@ export function RegisterService(data) {
 /**
  * 
  */
-export function RefreshService({ token, token_type }, data) {
+export function RefreshAuthService({ token, token_type }, data) {
   const config = {
     token,
     token_type,
@@ -52,7 +52,7 @@ export function RefreshService({ token, token_type }, data) {
 /**
  * 
  */
-export function ForgotPasswordService(data) {
+export function ForgotPasswordAuthService(data) {
   const config = {
     method: 'POST',
     uri: '/v1/forgot-password',

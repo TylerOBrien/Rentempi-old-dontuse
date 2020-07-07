@@ -12,7 +12,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { VerifiedRouterConfig } from '~/config/Router';
 import { Router } from '~/components';
 import { VerifiedScreens } from '~/screens';
-import { ResourceProvider } from '~/providers';
 
 /**
  * Locals
@@ -31,7 +30,6 @@ export function VerifiedRouter(props) {
   return (
     <Router
       { ...VerifiedRouterConfig.defaultProps }
-      container={ ResourceProvider }
       stack={ VerifiedRouterStack }
       screens={ VerifiedScreens }
     />

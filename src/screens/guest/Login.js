@@ -2,24 +2,18 @@
  * Global Imports
 */
 
-import PropTypes from 'prop-types';
-import React, { useEffect, useContext, useState } from 'react';
-import { Formik } from 'formik';
+import React from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 /**
  * Local Imports
 */
 
-import { AuthContext } from '~/providers';
+import { Button } from '~/components/Form';
+import { Row } from '~/components/Grid';
+import { Link } from '~/components/Link';
 import { View } from '~/components/TailwindCss';
 import { PrimaryLayout } from '~/layouts/guest/PrimaryLayout';
-import { LoginService } from '~/services/Auth';
-
-/**
- * Locals
-*/
-
-
 
 /**
  * Exports
@@ -29,54 +23,20 @@ import { LoginService } from '~/services/Auth';
  * 
  */
 export function Login(props) {
-  /** Contexts **/
-  
-  const auth = useContext(AuthContext);
-
-  /** States **/
-  
-  const [ error, setError ] = useState(null);
-
-  /** Formik **/
-  
-  const initialValues = {
-    email: '',
-    password: ''
-  };
-  
-  /** Event Handlers **/
-  
-  /**
-   * 
-   */
-  const handleSubmit = (values, { setSubmitting }) => {
-    LoginService(values)
-      .then(response => auth.authenticate(response.data))
-      .catch(error => {
-        setError(error.response.data);
-        setSubmitting(false);
-      })
-    ;
-  };
-  
-  /** Renderers **/
-  
-  /**
-   * 
-   */
-  const renderForm = ({ isSubmitting }) => (
-    <Form container={ View } tailwind='pb-8'>
-      <Text>testing</Text>
-    </Form>
-  );
-  
-  /** Output **/
-  
   return (
-    <PrimaryLayout>
-      <Formik initialValues={ initialValues } onSubmit={ handleSubmit }>
-        { renderForm }
-      </Formik>
+    <PrimaryLayout title='Login'>
+      <Row tailwind='justify-center mt-24'>
+        <View tailwind='mx-6'><Icon name='apple' size={ 32 } /></View>
+        <View tailwind='mx-6'><Icon name='facebook' size={ 32 } /></View>
+        <View tailwind='mx-6'><Icon name='google' size={ 32 } /></View>
+      </Row>
+      <View tailwind='w-full mt-8 px-8'>
+        <Link
+          to='LoginForm'
+          label='Login with Email'
+          container={ Button }
+        />
+      </View>
     </PrimaryLayout>
   );
 }

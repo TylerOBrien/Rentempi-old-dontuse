@@ -12,7 +12,8 @@ import Icon from 'react-native-vector-icons/FontAwesome';
  * Local Imports
 */
 
-import { ScrollView, Text, View } from '~/components/TailwindCss';
+import { Col, Row } from '~/components/Grid';
+import { ScrollView, Text, TouchableOpacity, View } from '~/components/TailwindCss';
 
 /**
  * Exports
@@ -29,8 +30,18 @@ export function PrimaryLayout(props) {
   /** Output **/
 
   return (
-    <Fragment>
+    <Col tailwind='items-center w-full h-full py-16'>
+      <Row tailwind='relative justify-center items-center w-1/2'>
+        <View tailwind='absolute left-0'>
+          <TouchableOpacity onPress={ () => navigation.goBack() }>
+            <Icon name='chevron-left' size={ 24 } color='black' />
+          </TouchableOpacity>
+        </View>
+        <Text tailwind='flex flex-row justify-center font-bold text-2xl'>
+          { props.title }
+        </Text>
+      </Row>
       { props.children }
-    </Fragment>
+    </Col>
   );
 }

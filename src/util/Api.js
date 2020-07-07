@@ -20,7 +20,7 @@ import { ApiConfig } from '~/config';
 export function ApiRequest({ token, token_type, method, uri, data, headers }) {
   const config = {
     method,
-    url: `${ ApiConfig.URL }${ uri }`,
+    url: `${ ApiConfig.url }${ uri }`,
     headers: {
       Authorization: ( token && token_type ) ? `${ token_type } ${ token }` : undefined,
       ...headers,

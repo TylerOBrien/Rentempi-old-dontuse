@@ -22,21 +22,25 @@ Clone `package.json` from the Rentempi repo or manually install the following de
 @react-navigation/native
 @react-navigation/stack
 axios
+babel-plugin-module-resolver
 formik
 react-native-gesture-handler
 moment
 moment-timezone
+react-native-dash
 react-native-dotenv
 react-native-modal
 react-native-reanimated
 react-native-safe-area-context
 react-native-screens
 react-native-svg
+react-native-vector-icons
+tailwindcss
 tailwind-rn
 ```
 
 As `yarn` command:
 
 ```
-yarn add @react-native-community/async-storage @react-native-community/masked-view @react-native-community/picker @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack axios formik react-native-gesture-handler moment moment-timezone react-native-dotenv react-native-modal react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg tailwind-rn
+yarn add @react-native-community/async-storage @react-native-community/masked-view @react-native-community/picker @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack axios babel-plugin-module-resolver formik react-native-gesture-handler moment moment-timezone react-native-dash react-native-dotenv react-native-modal react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg react-native-vector-icons tailwindcss tailwind-rn
 ```

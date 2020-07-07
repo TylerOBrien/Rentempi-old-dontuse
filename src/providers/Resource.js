@@ -10,7 +10,7 @@ import React, { useContext, useState } from 'react';
 */
 
 import { ApiContext } from '~/providers';
-import { usePagination } from '~/util/Pageinate';
+import { usePagination } from '~/util/Paginate';
 
 /**
  * Locals

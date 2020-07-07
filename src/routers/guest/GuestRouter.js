@@ -12,7 +12,6 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { GuestRouterConfig } from '~/config/Router';
 import { Router } from '~/components';
 import { GuestScreens } from '~/screens';
-import { ResourceProvider } from '~/providers';
 
 /**
  * Locals
@@ -31,7 +30,6 @@ export function GuestRouter(props) {
   return (
     <Router
       { ...GuestRouterConfig.defaultProps }
-      container={ ResourceProvider }
       stack={ GuestRouterStack }
       screens={ GuestScreens }
     />

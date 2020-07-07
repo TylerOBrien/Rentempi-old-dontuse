@@ -9,7 +9,8 @@ import React, { useEffect, useContext, useState } from 'react';
  * Local Imports
 */
 
-import { View } from '~/components/TailwindCss';
+import { Text, TouchableOpacity, View } from '~/components/TailwindCss';
+import { AuthContext } from '~/providers';
 import { PrimaryLayout } from '~/layouts/verified/PrimaryLayout';
 
 /**
@@ -20,9 +21,18 @@ import { PrimaryLayout } from '~/layouts/verified/PrimaryLayout';
  * 
  */
 export function Dashboard(props) {
+  /** Contexts **/
+
+  const auth = useContext(AuthContext);
+
+  /** Output **/
+
   return (
     <PrimaryLayout>
       <Text>Dashboard</Text>
+      <TouchableOpacity onPress={ () => auth.logout() }>
+        <Text>Logout</Text>
+      </TouchableOpacity>
     </PrimaryLayout>
   );
 }

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-  package="com.rentempi">
+  package="com.rentempinew">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

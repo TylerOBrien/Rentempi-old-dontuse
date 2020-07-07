@@ -13,7 +13,7 @@ export const GuestRouterConfig = {
 
 export const VerifiedRouterConfig = {
   defaultProps: {
-    initialRouteName: 'Statistics',
+    initialRouteName: 'Dashboard',
     screenOptions: {
       animationEnabled: false,
       headerShown: false

@@ -1,4 +1,10 @@
 /**
+ * Global Imports
+*/
+
+import { create } from 'tailwind-rn';
+
+/**
  * Local Imports
 */
 
