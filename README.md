@@ -77,3 +77,9 @@ In the file `ios/Podfile` add the following after `use_react_native!(:path => co
 ```
 pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 ```
+
+Run:
+
+```
+pod update
+```
