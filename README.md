@@ -2,7 +2,7 @@
 
 This project does not use Expo.
 
-It assumes that React Native was setup using the `npx react-native init` command. This is how this repo was created. Using the existing android/ios folders is not required, but using them will make the actual app named `Rentempi` which is unlikely to be tenable. You must either create a new React Native project or rename this existing one.
+It assumes that React Native was setup using the `react-native init` command. This is how this repo was created. Using the existing android/ios folders is not required, but using them will make the actual app named `Rentempi` which is unlikely to be tenable. You must either create a new React Native project or rename this existing one.
 
 If creating a new project, use React Native version `0.63.0` to ensure best compability, as it is the version used to create Rentempi:
 
