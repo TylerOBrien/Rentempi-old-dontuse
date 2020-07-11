@@ -48,19 +48,19 @@ yarn add @react-native-community/async-storage @react-native-community/masked-vi
 
 #### Android
 
-If necessary: Add `android/local.properties` file containing filepath to your local version of the Android SDK:
+If necessary, add `android/local.properties` file containing filepath to your local version of the Android SDK:
 
-**Windows**
+*Windows*
 ```
 sdk.dir=%LOCALAPPDATA%\\Android\\sdk
 ```
 
-**Linux**
+*Linux*
 ```
 sdk.dir=~/Android/Sdk
 ```
 
-**Mac**
+*Mac*
 ```
 sdk.dir=~/Library/Android/sdk
 ```
