@@ -38,6 +38,16 @@ yarn add @react-native-community/async-storage @react-native-community/masked-vi
 
 # Setup
 
+### General
+
+#### iOS
+
+Run from project root:
+
+```
+npx pod-install
+```
+
 ### React Native Vector Icons
 
 #### Android
