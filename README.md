@@ -14,6 +14,7 @@ npx react-native init MyProject --version 0.63.0
 
 ```
 @react-native-community/async-storage
+@react-native-community/checkbox
 @react-native-community/masked-view
 @react-native-community/picker
 @react-navigation/bottom-tabs
@@ -39,7 +40,7 @@ tailwind-rn
 As `yarn` command:
 
 ```
-yarn add @react-native-community/async-storage @react-native-community/masked-view @react-native-community/picker @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack axios babel-plugin-module-resolver formik react-native-gesture-handler moment moment-timezone react-native-dash react-native-modal react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg react-native-vector-icons tailwindcss tailwind-rn
+yarn add @react-native-community/async-storage @react-native-community/checkbox @react-native-community/masked-view @react-native-community/picker @react-navigation/bottom-tabs @react-navigation/native @react-navigation/stack axios babel-plugin-module-resolver formik react-native-gesture-handler moment moment-timezone react-native-dash react-native-modal react-native-reanimated react-native-safe-area-context react-native-screens react-native-svg react-native-vector-icons tailwindcss tailwind-rn
 ```
 
 # Setup
