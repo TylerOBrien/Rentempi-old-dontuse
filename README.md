@@ -131,3 +131,9 @@ Use this to generate the `styles.json` file for Tailwind:
 npx create-tailwind-rn
 mv styles.json resources/tailwind
 ```
+
+Or use the yarn script provided by Rentempi which will execute those two commands:
+
+```
+yarn tailwind
+```
