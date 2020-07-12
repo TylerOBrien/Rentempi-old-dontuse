@@ -122,3 +122,12 @@ Run from `ios` directory:
 ```
 pod update
 ```
+
+# Notes
+
+Use this to generate the `styles.json` file for Tailwind:
+
+```
+npx create-tailwind-rn
+mv styles.json resources/tailwind
+```
