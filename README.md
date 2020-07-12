@@ -96,6 +96,7 @@ pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 In the file `ios/YourProjectName/Info.plist` add the following the end of the file before `</dict>`:
 
 ```
+<key>UIAppFonts</key>
 <array>
 	<string>AntDesign.ttf</string>
 	<string>Entypo.ttf</string>
